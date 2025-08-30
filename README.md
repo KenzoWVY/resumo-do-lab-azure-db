@@ -4,22 +4,21 @@ O objetivo deste repositório é documentar a criação de uma instância de ban
 
 ## Criação
 
-No portal da Microsoft Azure, foi escolhida a opção de criar uma instância gerenciada de SQL dentro da aba Azure SQL, utilizando do plano Azure for Students como método de inscrição.
-
-![alt text](https://github.com/KenzoWVY/resumo-do-lab-azure-db/blob/main/images/deployed.PNG "Deployed")  
+No portal da Microsoft Azure, dentro da aba SQL, foi escolhida a opção de criar uma instância gerenciada de SQL utilizando do plano Azure for Students como método de inscrição.
 
 ## Configuração
 
 Por ser uma instância de testes temporária foram escolhidas as opções mais básicas de computação: 4vCores e 32GB de armazenamento, e como autenticação, um login SQL. Nas opções de rede, foi selecionada a opção de permitir o acesso da instância pela internet.
 
+![alt text](https://github.com/KenzoWVY/resumo-do-lab-azure-db/blob/main/images/deployed.PNG "Deployed")  
+
 ## Conexão
 
-Dentro das regras de segurança da instância, foi adicionado o meu endereço IP como permitido de utilizar a porta padrão do SQL Server. Uma API foi criada utilizando do .NET Entity Framework Core, e um POST http foi enviado para um banco de dados criado na instância:
-
+Dentro das regras de segurança da instância, foi adicionado o meu endereço IP como permitido de utilizar a porta padrão do SQL Server. Uma API (incluida no repositório) foi criada utilizando do .NET Entity Framework Core, e um POST http foi enviado para um banco de dados criado na instância:
 
 ![alt text](https://github.com/KenzoWVY/resumo-do-lab-azure-db/blob/main/images/post.PNG "Interface swagger")  
 
-Na *overview* da instância, foi possível observar uma pequena parte do armazenamento sendo utilizado, e fazendo uma consulta através do comando "SELECT" no Microsoft SQL Management Studio, foi confirmado que os dados realmente foram criados.
+Na *overview* da instância, foi possível observar uma pequena parte do armazenamento sendo utilizada, e fazendo uma consulta através do comando "SELECT" no Microsoft SQL Management Studio, foi confirmado que os dados realmente foram criados.
 
 ![alt text](https://github.com/KenzoWVY/resumo-do-lab-azure-db/blob/main/images/storage.PNG "Armazenamento")
 ![alt text](https://github.com/KenzoWVY/resumo-do-lab-azure-db/blob/main/images/select.PNG "Select")  
